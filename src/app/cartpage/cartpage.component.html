@@ -1,0 +1,37 @@
+<div class="container">
+  <ul>
+    <li *ngFor="let cartItem of cart.items">
+      <div>
+        <img src="assets/images/food_images/food.jpg" [alt]="cartItem.product.name">
+      </div>
+      <div>
+        <h3>{{cartItem.product.name}}</h3>
+        <p class="price">{{cartItem.product.price | currency}}</p>
+        <p class="total-price">{{cartItem.product.price * cartItem.quantity | currency}}</p>
+      </div>
+      <div>
+        <input type="number" #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)" [value]="cartItem.quantity" min="1">
+      </div>
+      <div>
+        <button class="remove-button" (click)="removeFromCart(cartItem)">Verwijder</button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="checkout">
+    <div>
+      <div class="total-price">{{cart.totalPrice | currency}}</div>
+      <button class="checkout-button" (click)="checkout()">Bestellen</button>
+    </div>
+    <div class="promo-code-container">
+      <div *ngIf="cart.hasPromoCode" class="promo-code">
+        {{cart.promoCode}} toegepast
+        <button class="remove-promo-code-button" (click)="removePromoCode()">Verwijder Promo</button>
+      </div>
+      <div *ngIf="!cart.hasPromoCode" class="promo-code-input-container">
+        <input type="text" #promoCodeInput placeholder="Promo code">
+        <button class="promo-code-button" (click)="applyPromoCode(promoCodeInput.value)">Pas toe</button>
+      </div>
+    </div>
+  </div>
+</div>

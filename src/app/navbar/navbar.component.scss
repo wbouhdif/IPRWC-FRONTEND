@@ -1,0 +1,40 @@
+header{
+  background: #a50205;
+  border-bottom: black 1px solid;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+ul li a:hover{
+  color: black;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title{
+  font-size: 1.5rem;
+}
+
+li{
+  list-style-type: none;
+  margin-right: 35px;
+}
+
+nav ul{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+}

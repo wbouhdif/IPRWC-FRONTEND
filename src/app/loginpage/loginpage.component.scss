@@ -1,0 +1,56 @@
+body {
+  background-color: white;
+}
+
+.registration-label {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.button-login {
+  appearance: none;
+  position: relative;
+  outline: none;
+  box-shadow: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.85em;
+  background-color: #a50205;
+  background-size: 100% 100%;
+  transition: background 300ms ease-out;
+  font-size: 18px;
+}
+
+.button-register{
+  border: 2px solid #000000;
+  transition: border 300ms ease-out;
+  color: #2d2926;
+  background: #ffffff;
+  padding-top: calc(0.85em - 0.111em);
+  padding-bottom: calc(0.85em - 0.111em);
+  text-transform: none;
+}
+
+input{
+  background: #fff;
+  color: #666;
+  font-size: 1em;
+  padding: 0.85em;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  resize: none;
+  font-weight: bold;
+  height: auto;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}

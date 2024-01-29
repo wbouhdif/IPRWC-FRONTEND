@@ -1,0 +1,56 @@
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+li img{
+  height: 15rem;
+  width: 20rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #a50205;
+}
+
+.content{
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+button{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: #a50205;
+  cursor: pointer;
+}
+
+button:hover{
+  color: #700304;
+}
+
+.description{
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.price{
+  font-size: 1.2rem;
+  color: #a50205;
+}
+
+h3{
+  font-size: 1.4rem;
+  font-weight: normal;
+}

@@ -1,0 +1,23 @@
+<div class="button-container">
+  <button [disabled]="selectedProduct !== null" class="create-button" (click)="openCreateProductModal()">Aanmaken</button>
+  <button [disabled]="selectedProduct === null || selectedProduct === undefined" (click)="openEditProductModal(selectedProduct)">Updaten</button>
+  <button [disabled]="selectedProduct === null || selectedProduct === undefined" (click)="showDeleteProductWarning(selectedProduct)">Verwijderen</button>
+</div>
+<div class="table-container">
+  <table class="table table-striped">
+    <thead class="sticky-top">
+    <tr>
+      <th class="column px-4">Naam</th>
+      <th class="column px-4">Beschrijving</th>
+      <th class="column px-4">Prijs</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products" (click)="setSelectedProduct(product)" [ngStyle]="selectedProduct === product ? {'background-color': 'rgba(206,208,211,0.7)'} : {}">
+      <td class="column px-4">{{ product.name }}</td>
+      <td class="column px-4">{{ product.description }}</td>
+      <td class="column px-4">{{ "€" + product.price }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

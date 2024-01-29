@@ -1,0 +1,37 @@
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 30px;
+  color: #666;
+}
+
+p {
+  color: #999;
+}
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #a50205;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  max-width: 200px;
+  width: auto;
+}
+
+.custom-button:hover {
+  background-color: #a50205;
+  color: white;
+  transform: scale(1.05);
+}

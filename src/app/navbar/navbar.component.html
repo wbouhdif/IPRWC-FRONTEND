@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<header>
+  <div class="container">
+    <div class="company-name">
+      <a href="#" [routerLink]="['']"><img src="../../assets/images/1200px-KFC_logo.svg.png" href="#" class="logo"></a>
+      <a class="title">Kinda Famous Chicken</a>
+    </div>
+    <nav>
+      <ul>
+        <div *ngIf="isLoggedIn">
+          <li><a href="#" [routerLink]="['']" (click)="logout()"> <i class="bi bi-box-arrow-right"> Logout</i></a></li>
+        </div>
+
+        <div *ngIf="!isLoggedIn">
+          <li><a href="#" [routerLink]="['/login']"> <i class="bi bi-person-circle"> Login</i></a></li>
+        </div>
+
+        <li><a href="#" [routerLink]="['/cart-page']"><i class="bi bi-cart"> Winkelwagen</i></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

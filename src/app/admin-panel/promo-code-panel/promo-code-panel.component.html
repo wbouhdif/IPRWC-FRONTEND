@@ -1,0 +1,25 @@
+<div class="button-container">
+  <button [disabled]="selectedCode !== null" class="create-button" (click)="openCreateCodeModal()">Aanmaken</button>
+  <button [disabled]="selectedCode === null || selectedCode === undefined" (click)="openEditCodeModal(selectedCode)">Updaten</button>
+  <button [disabled]="selectedCode === null || selectedCode === undefined" (click)="showDeleteProductWarning(selectedCode)">Verwijderen</button>
+</div>
+<div class="table-container">
+  <table class="table table-striped">
+    <thead class="sticky-top">
+    <tr>
+      <th class="column px-4">Actief</th>
+      <th class="column px-4">Code</th>
+      <th class="column px-4">Korting</th>
+      <th class="column px-4">Vervaldatum</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let promocode of promocodes" (click)="setSelectedCode(promocode)" [ngStyle]="selectedCode === promocode ? {'background-color': 'rgba(206,208,211,0.7)'} : {}">
+      <td class="column px-4">{{ promocode.active }}</td>
+      <td class="column px-4">{{ promocode.code }}</td>
+      <td class="column px-4">{{ promocode.discount + '%' }}</td>
+      <td class="column px-4">{{ promocode.expirationDate | date:'dd-MM-yyyy' }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

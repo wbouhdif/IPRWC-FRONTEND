@@ -1,0 +1,27 @@
+<div *ngIf="product" class="product-detail-container">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-5">
+        <div class="card-img-container">
+          <img src="../../assets/images/food_images/food.jpg" class="img-fluid" alt="{{product.name}}">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="card-body">
+          <h2 class="card-title">{{product.name}}</h2>
+          <p class="card-text">{{product.description}}</p>
+          <p class="card-text price"><small class="text-muted">{{product.price | currency}}</small></p>
+          <button type="button" class="btn btn-primary add-to-cart-btn" (click)="addToCart(product)">Toevoegen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="additional-info">
+  <h3>Waarom onze burgers het verschil maken</h3>
+  <p>Onze burgers zijn gemaakt van 100% puur rundvlees zonder ongewenste toevoegingen of conserveringsmiddelen.
+    We gebruiken uitsluitend het beste vlees dat dagelijks vers wordt gemalen.
+    Onze hamburgerbroodjes zijn altijd vers, nooit bevroren. Onze groenten en sauzen zijn van topkwaliteit, net als ons rundvlees.</p>
+  <p>Gezond, goed bereid en rijk van smaak - ontdek het verschil dat kwaliteit maakt bij elke hap.</p>
+</div>

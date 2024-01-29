@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let item of products">
+    <a [routerLink]="['/product', item.id]">
+      <img ngSrc="../../assets/images/food_images/food.jpg" height="4996" width="7490">
+    </a>
+    <div class="content">
+      <h3>{{item.name}}</h3>
+      <p class="description">{{item.description}}</p>
+      <p class="price">{{item.price | currency}}</p>
+      <button (click)="addToCart(item)">Toevoegen</button>
+    </div>
+  </li>
+</ul>

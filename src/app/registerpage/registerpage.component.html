@@ -1,0 +1,25 @@
+<br>
+<body>
+<div class="form-container">
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h1>Maak een account aan.</h1>
+    <div class="form-group-vertical">
+      <input class="input" type="text" placeholder="E-mailadres" formControlName="email">
+    </div>
+    <div class="form-group-vertical">
+      <input class="input" type="text" placeholder="Bevestig E-mailadres" formControlName="confirmEmail">
+    </div>
+    <div class="form-group-vertical">
+      <input class="input" type="password" placeholder="Wachtwoord" formControlName="password">
+      <app-password-requirements [passwordToCheck]="registerForm.get('password')?.value" (passwordStrength)="passwordValid($event)"></app-password-requirements>
+    </div>
+    <div class="form-group-vertical">
+      <input class="input" type="password" placeholder="Bevestig Wachtwoord" formControlName="confirmPassword">
+    </div>
+    <div class="form-group-vertical">
+      <button class="button-register" type="submit" [disabled]="!passwordIsValid">Registreer</button>
+    </div>
+      <button class="button-back" [routerLink]="['/login']">Terug</button>
+  </form>
+</div>
+</body>

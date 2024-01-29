@@ -1,0 +1,23 @@
+<h1>Product</h1>
+<form [formGroup]="productForm" class="form" (ngSubmit)="submitProductForm()">
+
+  <div class="form-group-vertical">
+    <label>Naam:</label>
+    <input type="text" formControlName="name" />
+
+    <label>Prijs:</label>
+    <input type="number" formControlName="price" />
+
+    <label>Beschrijving:</label>
+    <textarea formControlName="description"></textarea>
+  </div>
+
+  <div class="form-group-horizontal">
+    <button type="submit">Bevestig</button>
+    <button type="button" (click)="closeDialog()">Annuleer</button>
+
+
+  </div>
+
+
+</form>
